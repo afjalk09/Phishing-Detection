@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #00f2fe, #4facfe);
+    }
+
+    .signup-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 450px;
+      text-align: center;
+    }
+
+    .signup-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus {
+      border-color: #00c6ff;
+      box-shadow: 0 0 6px rgba(0, 198, 255, 0.5);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00c6ff, #4facfe);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #00a6d6, #3a8dde);
+    }
+
+    .extra-links {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .extra-links a {
+      color: #4facfe;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>📝 Sign Up</h2>
+    <form method="POST">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="username" placeholder="Enter your email" required>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+
+    <!-- Extra Links -->
+    <div class="extra-links">
+      <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+    </div>
+  </div>
+</body>
+</html>

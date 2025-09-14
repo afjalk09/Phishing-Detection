@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishGuard - Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1f1c2c, #928DAB);
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 700px;
+      padding: 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #f0f0f0;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      text-decoration: none;
+    }
+
+    .btn-started {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #fff;
+    }
+
+    .btn-started:hover {
+      background: linear-gradient(135deg, #0072ff, #0049b7);
+      transform: translateY(-3px);
+    }
+
+    .btn-signup {
+      background: #fff;
+      color: #0072ff;
+    }
+
+    .btn-signup:hover {
+      background: #f0f0f0;
+      transform: translateY(-3px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Background circles for modern look */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .circle:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      top: 10%;
+      left: 15%;
+    }
+
+    .circle:nth-child(2) {
+      width: 300px;
+      height: 300px;
+      bottom: 10%;
+      right: 10%;
+      animation-delay: 3s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Decorative Circles -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <div class="container">
+    <h1>🔒 PhishGuard</h1>
+    <p>Protect yourself from phishing scams, frauds, and malicious URLs.<br>
+       Enter a URL or message and stay safe online.</p>
+    <div class="btn-group">
+      <a href="/login" class="btn btn-started">Get Started</a>
+      <a href="/signup" class="btn btn-signup">Sign Up</a>
+    </div>
+  </div>
+</body>
+</html>
